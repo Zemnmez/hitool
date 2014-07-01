@@ -148,7 +148,7 @@ func run() (chn <-chan interface{}) {
 
 		if backgroundcolor == "" {
 
-			c <- fmt.Sprintf("hi %s guifg=%s ctermfg=%s", tag, colour, strconv.Itoa(int(fg.To256())))
+			c <- fmt.Sprintf("hi %s guifg=#%s ctermfg=%s", tag, colour, strconv.Itoa(int(fg.To256())))
 			return
 		}
 
@@ -160,7 +160,7 @@ func run() (chn <-chan interface{}) {
 		}
 
 		c <- fmt.Sprintf(
-			"hi %s guifg=%s guibg=%s ctermfg=%s ctermbg=%s",
+			"hi %s guifg=#%s guibg=#%s ctermfg=%s ctermbg=%s",
 			tag,
 			colour,
 			strconv.Itoa(int(fg.To256())),
