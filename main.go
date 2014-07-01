@@ -163,8 +163,8 @@ func run() (chn <-chan interface{}) {
 			"hi %s guifg=#%s guibg=#%s ctermfg=%s ctermbg=%s",
 			tag,
 			colour,
-			strconv.Itoa(int(fg.To256())),
 			backgroundcolor,
+			strconv.Itoa(int(fg.To256())),
 			strconv.Itoa(int(bg.To256())),
 		)
 	}()
